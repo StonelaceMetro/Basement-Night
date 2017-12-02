@@ -1,14 +1,23 @@
 <footer class="footer">
   <small>
-    The <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a>
-    by <a href="http://www.michaelhartl.com/">Michael Hartl</a>
+    <a href="https://stonelacemetro.bandcamp.com/album/special-boy-right-boy-right-now-rich-in-vitamins-mix-ep">Rich in Vitamins</a>
+
   </small>
   <nav>
     <ul>
       <li><%= link_to "About",   '#' %></li>
       <li><%= link_to "Contact", '#' %></li>
-      <li><a href="http://news.railstutorial.org/">News</a></li>
+
     </ul>
+
+    <ul>
+      <% if user_signed_in? %>
+		<%= link_to "Logout", destroy_user_session_path, method: :delete %>
+
+      <% end %>
+    </ul>
+
+
   </nav>
 </footer>
 

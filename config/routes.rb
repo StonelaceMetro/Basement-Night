@@ -3,16 +3,12 @@ Rails.application.routes.draw do
 
 
 
-  devise_for :users, controllers: {
-        sessions: 'users/sessions',
-	registrations: 'users/registrations'
-  }
+  devise_for :users
 
 
 
 
-
-  get '/about',	to: 'static_pages#help'
+  get '/about',	to: 'basement_night#about'
 
   root 'basement_night#home'
 

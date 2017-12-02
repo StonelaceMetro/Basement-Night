@@ -1,2 +1,16 @@
-<h1>BasementNight#home</h1>
-<p>Find me in app/views/basement_night/home.html.erb</p>
+
+<% provide(:title, "Home") %>
+
+
+
+<div class="center jumbotron">
+  <h1>Basement Night</h1>
+
+  <h2>
+    Abomination by StonelaceMetro
+  </h2>
+
+  <%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-lg btn-primary" %>
+</div>
+
+
